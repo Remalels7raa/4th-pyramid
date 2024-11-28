@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const ImageSwiper = ({ images, className }) => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -37,7 +38,6 @@ export const ImageSwiper = ({ images, className }) => {
           onClick={() => {
             if (imgIndex < images.length - 1) setImgIndex((pv) => pv + 1);
           }}>
-      
           <IconChevronLeft className="stroke-neutral-600" size={20} />
         </button>
       </div>
@@ -66,11 +66,12 @@ export const ImageSwiper = ({ images, className }) => {
           <motion.div
             key={i}
             className="h-full w-full shrink-0 overflow-hidden object-cover rounded-lg">
-            <img
+            <LazyLoadImage
               src={src}
-              // loading="lazy"
               className="pointer-events-none h-full w-full object-fit"
               alt={`image-${i + 1}`}
+              loading="lazy"
+              onError={(e) => (e.target.src = "/path/to/fallback-image.jpg")}
             />
           </motion.div>
         ))}

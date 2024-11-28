@@ -1,0 +1,60 @@
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; 
+  width: 40px; 
+  border-radius: 5px;
+  color: #6c757d; /* لون رمادي للنص */
+  text-decoration: none; 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+  cursor: pointer;
+  background-color: #f8f9fa; 
+  border: 1px solid #ced4da; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.page-item.active .page-link {
+  font-weight: 700;
+  color: #ffffff !important; 
+  background-color: #6c757d; /* لون رمادي للخلفية */
+  border-color: #6c757d; /* لون رمادي للحدود */
+}
+
+.page-link:hover {
+  background-color: #5a6268; /* لون رمادي داكن عند التمرير */
+  color: #ffffff !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.page-item.disabled .page-link {
+  color: #a1a1a1; 
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: #e9ecef; 
+  border: 1px solid #dee2e6; 
+}
+
+.pagination .active {
+  background-color: #6c757d; 
+  color: #fff; 
+  border-radius: 5px;
+}
+
+.pagination .show {
+  color: #6c757d; 
+  background-color: transparent; 
+}
+
+@media (max-width: 768px) {
+  .page-link {
+    height: 35px; 
+    width: 35px; 
+    padding: 8px; 
+  }
+}

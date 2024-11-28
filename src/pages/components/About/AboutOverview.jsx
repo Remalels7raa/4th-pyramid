@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import aboutImg from "@/assets/about/about.webp";
 import { Link } from "react-router-dom";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const AboutOverview = () => {
  
   const textAnimation = {
@@ -33,8 +34,7 @@ const AboutOverview = () => {
             variants={textAnimation}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }} 
-          >
+            viewport={{ once: false, amount: 0.2 }}>
             <h3 className="text-2xl my-5 px-4 font-bold">
               تعرف على شركة الهرم الرابع للاستشارات الهندسية
             </h3>
@@ -53,20 +53,27 @@ const AboutOverview = () => {
             </p>
           </motion.div>
 
-          
           <motion.div
             className="flex h-full"
             variants={imageAnimation}
             initial="hidden"
-            whileInView="visible" 
-            viewport={{ once: false, amount: 0.2 }} 
-          >
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}>
             <Link to="/about" className="w-full h-full">
-              <img
+              {/* <img
                 src={aboutImg}
                 loading="lazy"
                 alt="about img"
                 className="w-full h-full md:h-full object-fit"
+              /> */}
+              <LazyLoadImage
+                src={aboutImg}
+                loading="lazy"
+                alt="about img"
+                className="w-full h-full md:h-full object-fit"
+                effect="blur"
+                width="100%"
+                height="100%"
               />
             </Link>
           </motion.div>

@@ -7,6 +7,7 @@ import "./pagination.css";
 
 
 import { TailSpin } from "react-loader-spinner"; // استيراد Spinner
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ImageItem = ({ src, alt, link, caption }) => {
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,8 @@ const ImageItem = ({ src, alt, link, caption }) => {
                 />
               </div>
             )}
-            <img
+           
+            <LazyLoadImage
               src={src}
               alt={alt}
               loading="lazy"
@@ -35,6 +37,7 @@ const ImageItem = ({ src, alt, link, caption }) => {
               className={`w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105 ${
                 loading ? "opacity-0" : "opacity-100"
               }`}
+              onError={(e) => (e.target.src = "/path/to/fallback-image.jpg")}
             />
             <div className="absolute bottom-0 left-0 right-0 text-center bg-black bg-opacity-30 px-4 py-2">
               <span className="text-gray-200 text-lg font-semibold">
@@ -74,7 +77,11 @@ const AllProducts = () => {
   };
 
   return (
-    <div className="container min-w-7xl mx-auto">
+    <div className="container min-w-7xl mx-auto bg-gray-100 py-5">
+      <p className="text-xl w-2/3 mx-auto pb-4 border-b-2  leading-10 border-gray-300  text-black mt-14 mb-5 px-4 text-center font-bold">
+        "نفخر بتقديم مجموعة مميزة من المشاريع التي تجمع بين الإبداع، الجودة،
+        والاحترافية لتلبية احتياجات عملائنا وتحقيق رؤاهم."
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 gap-4">
         {displayedItems.map((item) => (
           <ImageItem

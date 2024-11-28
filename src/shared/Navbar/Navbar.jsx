@@ -1,9 +1,9 @@
-import { Disclosure } from "@headlessui/react"
-import { XMarkIcon } from "@heroicons/react/24/outline"
-import { AlignRight, FileText } from "lucide-react"
-import { Link, NavLink } from "react-router-dom"
-import logoDark from "../../assets/logo.webp"
-import "./Navbar.css"
+import { Disclosure } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { AlignRight, FileText, Phone } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import logoDark from "../../assets/logo.webp";
+import "./Navbar.css";
 
 const Navbar = () => {
   const navigation = [
@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "من نحن", to: "about", current: false },
     { name: "خدمتنا", to: "services", current: false },
     { name: "أعمالنا", to: "projects", current: false },
+    { name: "عملائنا", to: "clients", current: false },
     { name: "تواصل معنا", to: "contact", current: false },
   ];
 
@@ -28,7 +29,10 @@ const Navbar = () => {
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <AlignRight className="block h-6 w-6 font-extrabold" aria-hidden="true" />
+                    <AlignRight
+                      className="block h-6 w-6 font-extrabold"
+                      aria-hidden="true"
+                    />
                   )}
                 </Disclosure.Button>
               </div>
@@ -61,7 +65,14 @@ const Navbar = () => {
                     ))}
                   </div>
                 </div>
-
+                <div className="hidden lg:flex items-center space-x-2  mr-6 text-gray-600 font-semibold hover:text-sky-800 transition duration-200">
+                  <Link
+                    to="tel:0554183175"
+                    className="text-lg flex items-center justify-center">
+                    <span className="px-2 ">0554183175</span>
+                    <Phone size={26} className="text-cyan-500" />
+                  </Link>
+                </div>
                 <div className="hidden lg:block">
                   <Link
                     className="w-40 h-12 flex justify-center rounded-5 items-center shadow-lg shadow-zinc-700 transition-colors duration-200 bg-cyan-600 border-2 Amiri-font border-zinc-600 hover:bg-cyan-700 hover:border-zinc-700 text-gray-50 hover:text-white text-md font-extrabold"
@@ -74,8 +85,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="lg:hidden">
-            <div className="flex flex-col items-start space-y-1 py-4 px-4 w-full bg-gray-300">
+          <Disclosure.Panel className="lg:hidden  bg-gray-300 py-4">
+            <div className="flex flex-col items-start space-y-1  px-4 w-full">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
@@ -91,11 +102,20 @@ const Navbar = () => {
                 </NavLink>
               ))}
               <Link
-                className="w-2/4 mx-auto rounded-5 shadow-lg shadow-zinc-500 transition-colors duration-200 my-2 py-2 bg-cyan-600 border-zinc-600 text-white text-center font-bold"
+                className="w-full mx-auto rounded-5 shadow-lg shadow-zinc-500 transition-colors duration-200 my-4 py-4 bg-cyan-600 hover:bg-cyan-700 border-zinc-600 text-white text-center font-bold"
                 to="/contact"
                 onClick={() => close()} // إغلاق القائمة عند النقر
               >
                 طلب عرض سعر
+              </Link>
+            </div>
+
+            <div className="w-full mx-auto px-4  ">
+              <Link
+                to="tel:0554183175"
+                className="font-semibold py-4 rounded-5 flex items-center justify-center text-lg  bg-gray-600 hover:bg-gray-700 shadow-lg shadow-zinc-500  transition-all duration-300 text-white space-x-2 mt-4">
+                <span className="px-2">0554183175</span>
+                <Phone size={26} className="text-sky-500" />
               </Link>
             </div>
           </Disclosure.Panel>

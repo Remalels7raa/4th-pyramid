@@ -8,6 +8,7 @@ import ProductOverview from "./components/Products/ProductOverview";
 import ProductsButton from "./components/Products/ProductsButton";
 
 import ServicesOverview from './components/Services/ServicesOverview';
+import ClientsOverview from './components/Clients/ClientsOverview';
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
       </div>
 
       <InnovationJourney />
+      <ClientsOverview/>
       <Location />
     </>
   );

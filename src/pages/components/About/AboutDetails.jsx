@@ -26,7 +26,7 @@ const AboutDetails = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-zinc-200 py-20 mb-3 shadow-md shadow-gray-400">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {countersData.map((data, index) => (
           <motion.div

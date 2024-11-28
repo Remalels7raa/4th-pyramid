@@ -125,7 +125,7 @@ const ContactForm = () => {
       <div className="flex justify-center">
         <Button
           type="submit"
-          className="btn w-full rounded-5 sm:w-1/2 md:w-1/2 lg:w-1/3 h-14  Amiri-font font-bold text-md sm:text-lg md:text-md lg:text-xl text-gray-50 border-sky-400 bg-sky-500 hover:bg-sky-600 hover:text-white transition-all duration-200 px-6 py-2 shadow-md shadow-black"
+          className="btn w-full rounded-5 sm:w-1/2 md:w-1/2 lg:w-1/3 h-14  Amiri-font font-bold text-md sm:text-lg md:text-md lg:text-xl text-gray-50 border-sky-400 bg-cyan-600 hover:bg-cyan-700 hover:text-white transition-all duration-200 px-6 py-2 shadow-md shadow-black"
           disabled={isSubmitting || isSending}>
           {isSending ? "جاري الإرسال..." : "ارسال البيانات"}
           <Send />

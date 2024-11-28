@@ -170,18 +170,18 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-cyan-600 Amiri-font cursor-pointer hover:text-blue-800 font-bold">
             <span className=" pl-2 hover:text-cyan-800 shadow-lg hover:shadow-gray-600 transition-all duration-300">
-              Eng / Asmaa Samir{" "}
+              Eng / Asmaa Samir
             </span>
           </Link>
           <span className=" px-1 text-cyan-600  hover:shadow-gray-600 transition-all duration-300">
             &
           </span>
           <Link
-            to="https://www.linkedin.com/in/asmaa-samir-698250266/"
+            to="https://www.linkedin.com/in/alaa-mahmoud-429812291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-cyan-600 Amiri-font cursor-pointer hover:text-blue-800 font-bold">
-            <span className=" px-1 hover:text-cyan-800 shadow-lg hover:shadow-gray-600 transition-all duration-300">
+            <span className="hover:text-cyan-800 shadow-lg hover:shadow-gray-600 transition-all duration-300">
               Eng / Alaa Mohamed
             </span>
           </Link>
