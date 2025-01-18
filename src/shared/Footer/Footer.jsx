@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 // import { cells } from "./useFooter";
-import SocialMediaIcons from "../../shared/SocialMediaIcons";
-import logoimg from "../../assets/logo.webp";
+import SocialMediaIcons from "@/shared/SocialMediaIcons";
+import logoimg from "@/assets/logo.webp";
 // footer images
-import footer1 from "../../assets/footer/instagram1.webp";
-import footer2 from "../../assets/footer/instagram2.webp";
-import footer3 from "../../assets/footer/instagram3.webp";
-import footer4 from "../../assets/footer/instagram4.webp";
-import footer5 from "../../assets/footer/instagram5.webp";
-import footer6 from "../../assets/footer/instagram6.webp";
+import footer1 from "@/assets/footer/instagram1.webp";
+import footer2 from "@/assets/footer/instagram2.webp";
+import footer3 from "@/assets/footer/instagram3.webp";
+import footer4 from "@/assets/footer/instagram4.webp";
+import footer5 from "@/assets/footer/instagram5.webp";
+import footer6 from "@/assets/footer/instagram6.webp";
 
 import CellFooter from "../../components/Ui/CellFooter";
 import {
@@ -162,30 +162,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <p className="text-sm  text-center bg-gray-300 text-gray-700 pb-5 font-bold ">
-          <span> This website was designed and developed by</span>
-          <Link
-            to="https://www.linkedin.com/in/asmaa-samir-698250266/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cyan-600 Amiri-font cursor-pointer hover:text-blue-800 font-bold">
-            <span className=" pl-2 hover:text-cyan-800 shadow-lg hover:shadow-gray-600 transition-all duration-300">
-              Eng / Asmaa Samir
-            </span>
-          </Link>
-          <span className=" px-1 text-cyan-600  hover:shadow-gray-600 transition-all duration-300">
-            &
-          </span>
-          <Link
-            to="https://www.linkedin.com/in/alaa-mahmoud-429812291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cyan-600 Amiri-font cursor-pointer hover:text-blue-800 font-bold">
-            <span className="hover:text-cyan-800 shadow-lg hover:shadow-gray-600 transition-all duration-300">
-              Eng / Alaa Mohamed
-            </span>
-          </Link>
-        </p>
+   
       </footer>
     </>
   );

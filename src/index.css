@@ -1,6 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Cairo";
+  src: url("./assets/fonts/Cairo/static/Cairo-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Cairo/static/Cairo-Regular.woff") format("woff"),
+    url("./assets/fonts/Cairo/static/Cairo-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; /* عرض النص باستخدام الخط الافتراضي في البداية */
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("./assets/fonts/Amiri/Amiri-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Amiri/Amiri-Regular.woff") format("woff"),
+    url("./assets/fonts/Amiri/Amiri-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* عرض النص باستخدام الخط الافتراضي في البداية */
+}
 
 body {
   font-family: "Cairo", sans-serif;

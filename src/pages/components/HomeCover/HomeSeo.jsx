@@ -17,17 +17,17 @@ const HomeSeo = () => {
       openGraph={{
         type: "website",
         locale: "ar_AR",
-        url: "https://www.4thpyramid.com", 
+        url: "https://www.4th-pyramid.com", 
         title: "شركة الهرم الرابع للاستشارات الهندسية",
         description:
           "تقدم شركة الهرم الرابع حلولًا متكاملة في مجال الاستشارات الهندسية بما يشمل التصميم المعماري والإشراف الهندسي.",
         site_name: "الهرم الرابع للاستشارات الهندسية",
-        image: "https://www.4thpyramid.com/og-image.jpg",
+        image: "https://www.4th-pyramid.com/og-image.jpg",
       }}
       twitter={{
         cardType: "summary_large_image",
-        site: "@4thPyramid",
-        creator: "@4thPyramid",
+        site: "@4th-pyramid",
+        creator: "@4th-pyramid",
       }}
     />
   );
